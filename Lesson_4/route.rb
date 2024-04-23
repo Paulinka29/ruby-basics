@@ -1,23 +1,23 @@
 # frozen_string_literal: true
 
 class Route
-  attr_reader :f_station, :l_station, :w_stations
+  attr_reader :first_station, :last_station, :way_stations
 
-  def initialize(f_station, l_station, w_stations)
-    @f_station = f_station
-    @l_station = l_station
-    @w_stations = w_stations
+  def initialize(first_station, last_station, way_stations)
+    @first_station = first_station
+    @last_station = last_station
+    @way_stations = way_stations
   end
 
   def add_way(station)
-    w_stations << station
+    way_stations << station
   end
 
   def remove_way(station)
-    w_stations.delete(station)
+    way_stations.delete(station)
   end
 
   def list
-    [f_station] + w_stations + [l_station]
+    [first_station] + way_stations + [last_station]
   end
 end

@@ -29,7 +29,7 @@ class Train
 
   def route=(route)
     @route = route
-    @current_station = route.f_station
+    @current_station = route.first_station
     current_station.trains << self
   end
 
