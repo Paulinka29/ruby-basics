@@ -18,8 +18,8 @@ class Station
   def initialize(name, trains = [])
     @name = name
     @trains = trains
-    register_instance
     validate!
+    register_instance
   end
 
   def arrived(train)

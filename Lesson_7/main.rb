@@ -45,6 +45,7 @@ class Main1
     end
   rescue => e
     puts e.message
+    retry
   end
 
   def manage_routes
@@ -80,6 +81,7 @@ class Main1
     puts 'Маршрут успешно добавлен'
   rescue => e
     puts e.message
+    retry
   end
 
   def edit_route
@@ -180,6 +182,7 @@ class Main1
     puts 'Поезд успешно добавлен'
   rescue => e
     puts e.message
+    retry
   end
 
   def edit_train
